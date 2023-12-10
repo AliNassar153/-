@@ -1,4 +1,18 @@
+* {
+  -webkit-transition: all .5s;
+  -webkit-animation-name: myfading;
+  -webkit-animation-duration: .8s;
+}
 
+@-webkit-keyframes myfading {
+  from {
+        opacity: 0;
+        -webkit-transition: opacity;
+  }
+  to {
+        opacity: 1;
+  }
+}
 body{
   background-color: #10152c;
   color: #fff;
@@ -28,6 +42,7 @@ width: 80%;
     p{
       font-size: 20px;
       color: #677183;
+      font-weight: bold;
     }
 }
 input{
