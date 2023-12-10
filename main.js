@@ -34,7 +34,7 @@ submit.onclick= function(){
     total:total.innerHTML,
     count:count.value,
   }
-  if(title.value!=""&&price.value!=""&&newPro.count<100){
+  if(title.value!=""&&price.value!=""&&newPro.count<1000){
     if(mood === "create"){
     if(newPro.count>1){
       for(let i =0 ; i<newPro.count ; i++){
@@ -126,9 +126,6 @@ function getSearchMood(id){
   if(id=="searchTitle"){
     searchMood= 'title';
     search.placeholder ="البحث بالعنوان"
-  }else{
-    searchMood="category"
-    search.placeholder ="البحث بالنوع"
   }
   search.focus()
   search.value=""
@@ -151,21 +148,7 @@ function searchDAta(value){
         </tr> 
     `;
       }
-  }else{
-      if(dataPro[i].category.includes(value.toLowerCase())){
-        table +=`
-        <tr>
-          <td>${i}</td>
-          <td>${dataPro[i].title}</td>
-          <td>${dataPro[i].price}</td>
-          <td>${dataPro[i].discount}</td>
-          <td>${dataPro[i].total}</td>
-          <th><button onclick="updateData(${i})" id="updte">تعديل</button></th>
-          <th><button onclick="deleteData(${i})" id="delete">حذف</button></th>
-        </tr> 
-    `;
-      }
-    }
+  }
   }
   document.getElementById('tbody').innerHTML =table;
 

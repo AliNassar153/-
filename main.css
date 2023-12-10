@@ -110,20 +110,10 @@ td,th{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width:767px){
+  body{
+    width: 100%;
+  }
   input{
     width: 100%;
     text-align: center;
@@ -135,7 +125,6 @@ td,th{
   width: 100%;
 }
 #total{
-  width: fit-content !important;
   margin: auto;
 }
 .btn{
