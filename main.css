@@ -1,0 +1,153 @@
+
+body{
+  background-color: #10152c;
+  color: #fff;
+}
+img{
+  position: absolute;
+  height: 140px;
+  width: 180px;
+  left: 20px;
+  top: 15px;
+}
+.container{
+width: 80%;
+  margin: auto;
+}
+.head{
+  text-align: center;
+  margin: 10px 0;
+  h2{
+    color: #199efd;
+    font-size: 40px;
+    &:hover{
+      color: #136cab;
+      letter-spacing: 3px;
+      transition: 1.2s;
+    }}
+    p{
+      font-size: 20px;
+      color: #677183;
+    }
+}
+input{
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 25px;
+  background-color: #1c3362;
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 10px;
+  &:focus{
+    background-color: #274582;
+    transform: scale(1.06);
+  }
+  &::placeholder{
+    color: rgb(158, 154, 154);
+  }
+}
+.prices{
+  width: 100%;
+}
+#total{
+  background-color: rgb(128, 0, 0);
+  padding: 15px 20px;
+  padding-left: 0;
+  border-radius: 5px;
+  color: rgb(158, 154, 154); ;
+  font-size: 25px;
+
+  &::before{
+    content: "الإجمالي";
+    padding: 10px;
+    
+  }
+}
+.btn{
+  margin: auto;
+  width: 50% !important;
+  padding: 10px ;
+}
+button{
+  width: 100%;
+  height: 35px;
+  font-size: 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #136cab;
+  color: #f1f0f0;
+  transition: 0.5s ;
+  &:hover{
+    background-color:#199efd;
+    letter-spacing: 2px;
+  }
+}
+.btnSearch{
+  display: flex;
+  justify-content: space-between;
+  button{
+    width: 45%;
+  }
+}
+#deleteAll{
+  margin: 20px auto;
+}
+table{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+td,th{
+  padding: 5px;
+}
+#tbody td{
+  border-bottom: 0.1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:767px){
+  input{
+    width: 100%;
+    text-align: center;
+  }
+.container{
+  width: 100%;
+}
+.prices{
+  width: 100%;
+}
+#total{
+  width: fit-content !important;
+  margin: auto;
+}
+.btn{
+  margin: auto;
+  width: 50% !important;
+  padding: 10px ;
+}
+img{
+  position: absolute;
+  height: 80px;
+  width: 110px;
+  left: 20px;
+  top: 30px;
+}
+}

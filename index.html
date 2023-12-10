@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <title>مصنع كرتون</title>
+
+</head>
+
+<body>
+  <div class="head">
+    <img src="./carton.png" alt="">
+    <h2>كرتونتك</h2>
+    <p> نظام ادارة المخازن</p>
+  </div>
+  <div class="container">
+    <div class="input">
+      <input placeholder="العنوان" type="text" id="title">
+      <div class="price">
+        <input class="prices" onkeyup="getTotal()" placeholder="السعر" type="number" id="price">
+        <input class="prices" onkeyup="getTotal()" placeholder=" الخصم" type="number" id="discount">
+        <div style="text-align: center;" onkeyup="getTotal()" id="total"></div>
+      </div>
+      <input placeholder="عدد التكرار" type="number" id="count">
+      <div class="btn"><button id="submit">انشاء</button></div>
+    </div>
+    <div class="output">
+      <div class="search">
+        <input onkeyup="searchDAta(this.value)" type="text" id="search" placeholder="بحث">
+        <div class="btnSearch">
+          <button onclick="getSearchMood(this.id)" id="searchTitle">البحث بالعنوان</button>
+          <button onclick="getSearchMood(this.id)" id="searchTcategory">البحث بالنوع </button>
+        </div>
+      </div>
+      <div class="btn" id="deleteAll"></div>
+      <table>
+        <tr>
+          <th>الرقم التعريفي</th>
+          <th>العنوان</th>
+          <th>السعر</th>
+          <th>الخصم</th>
+          <th>الاجمالي</th>
+          <th><button id="updte">تعديل</button></th>
+          <th><button id="delete">حذف</button></th>
+        </tr>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
